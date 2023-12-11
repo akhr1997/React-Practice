@@ -1,4 +1,7 @@
-const h1 = React.createElement("h1", {}, "Hello from React");
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+const h1 = React.createElement("h1", {}, "Hellooooo from React");
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

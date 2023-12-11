@@ -1,9 +1,11 @@
 /**
+ * NPM BASICS:
  * npm - install node package
  * npx - execute node package
  */
 
 /**
+ * CREATING REACT ELEMENT:
  * creating element in React takes in 3
  * HTML element,
  * object of attributes like class, id
@@ -11,30 +13,54 @@
  *      The child can be another create element to nest elements inside another
  *      we can use [] to add 2 elemts in the same level.
  */
-
-//creating HTML elements using React.createElement()
 React.creatElement("div", { id: "first-div" }, "Hello");
 
 /**
  * creating root
  * assiging "root" from DOM as React root
  */
-
 const root = React.creatRoot(document.getElementById("root"));
 
 /**
  * render - renders parent inside root
  */
-
 root.render(parent);
 
 /**
- * start parcel
+ * START PARCEL:
+ * npx parcel index.html
  */
-// npx parcel index.html
 
 /**
- * About package files:
+ * PARCEL DOES:
+ * dev build
+ * live server
+ * HMR - Hot Module Replacement comparing the two "dist" and ".parcel-cache" files
+ * File watching algorithm written in C++
+ * Reliable Caching for faster builds
+ * Compressing files
+ * Bundeling
+ * Minification
+ * Consisting Hashing
+ * Code Splitting
+ * Tree Shaking - Remove unused code during bundeling
+ * Differential Bundling - To support older browsers
+ * Error display view for developers on localhost
+ * HTTPs deployment in Dev Environment
+ * Different dev and prod bundlers
+ */
+
+/**
+ * BABEL:
+ * when we do
+ * const headingUsingJSX = <h1 id="headingUsingJSX">H1 from JSX</h1>;
+ * JavaScript engine doesn't understand this
+ * BABEL transpiles so that react understands it and before it reaches JS Engine which is managed by Parcel or webpack
+ * JSX => BABEL transpiles into React.createElement => ReactElement - JS Object => HTML Element(render)
+ */
+
+/**
+ * ABOUT PACKAGE.JSON AND PACKAGE-LOCK.JSON
  * ^ means it will update to the latest minor version automatically
  * ~ means it will update to the latest major version automatically
  *
@@ -59,14 +85,8 @@ root.render(parent);
  *      -then do "npm start" and "npm run build"
  */
 
-/**when we do
- * const headingUsingJSX = <h1 id="headingUsingJSX">H1 from JSX</h1>;
- * JavaScript engine doesn't understand this
- * BABEL transpiles so that react understands it and before it reaches JS Engine which is managed by Parcel or webpack
- * JSX => BABEL transpiles into React.createElement => ReactElement - JS Object => HTML Element(render)
- */
-
 /**
+ * JSX
  * JSX is HTML line syntax inside JavaScript
  * We use className in JSx insatead of HTML class
  * We can camel casing in JSX instead of hyphen in HTML
@@ -82,6 +102,7 @@ root.render(parent);
  */
 
 /**
+ * ABOUT IMPORTS
  * Imports of are 2 types
  * 1. Named
  *      - exported in the variable creation line as  - export const blah
@@ -92,7 +113,8 @@ root.render(parent);
  */
 
 /**
- * Hooks - Normal JS Functions
+ * HOOKS:
+ * They are Normal JS Functions
  * 1. useState
  *      - creates super powerful react state variables.
  *      - imported as named import using { useState } from "react"
@@ -103,26 +125,8 @@ root.render(parent);
  */
 
 /**
- * Parcel does:
- * dev build
- * live server
- * HMR - Hot Module Replacement comparing the two "dist" and ".parcel-cache" files
- * File watching algorithm written in C++
- * Reliable Caching for faster builds
- * Compressing files
- * Bundeling
- * Minification
- * Consisting Hashing
- * Code Splitting
- * Tree Shaking - Remove unused code during bundeling
- * Differential Bundling - To support older browsers
- * Error display view for developers on localhost
- * HTTPs deployment in Dev Environment
- * Different dev and prod bundlers
- */
-
-/**
- * WHY IS REACT SO FAST? -  efficient DOM manipulation and crazy fast rerenders
+ * WHY IS REACT SO FAST?
+ * Efficient DOM manipulation and crazy fast rerenders
  *1. Virtaul DOM
  *      - Copy of the DOM in the form of an Object
  *2. DIFF ALGORITHM. REACT FIBER, RECONCILIATION ALGORITHM
@@ -136,6 +140,7 @@ root.render(parent);
  */
 
 /**
+ * ABOUT USEEFFECT:
  * useEffect()
  * Is a JS function
  * It is called after the component is rendered
