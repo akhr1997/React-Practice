@@ -34,6 +34,22 @@ root.render(parent);
 // npx parcel index.html
 
 /**
+ * About package files:
+ * ^ means it will update to the latest minor version automatically
+ * ~ means it will update to the latest major version automatically
+ *
+ * Better to have ^ coz it updates just minor upgrades.
+ *
+ * package.json
+ * config file
+ * keeps track of what APPROX verson of npm that is installed with ^ and ~
+ *
+ * package-lock.json
+ * locks the EXTACT version and keeps track of it
+ * Keeps the track with SHA encryption
+ */
+
+/**
  * To code in react without doing npm create react app at the begining
  *      -create normal HTML, CSS, JS files
  *      -install parcel - npm install -D parcel (-D means it's a devDependencies)
