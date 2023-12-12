@@ -15,6 +15,11 @@
  */
 React.creatElement("div", { id: "first-div" }, "Hello");
 
+//CREATING REACT ELEMENT USING JSX:
+const jsxHeading = (
+  <h1 id="heading">This is how React Element is created using JSX</h1>
+);
+
 /**
  * creating root
  * assiging "root" from DOM as React root
@@ -57,6 +62,7 @@ root.render(parent);
  * JavaScript engine doesn't understand this
  * BABEL transpiles so that react understands it and before it reaches JS Engine which is managed by Parcel or webpack
  * JSX => BABEL transpiles into React.createElement => ReactElement - JS Object => HTML Element(render)
+ * Babel transpiles JSX into React code or JS code that browser understands
  */
 
 /**
@@ -78,7 +84,7 @@ root.render(parent);
 /**
  * To code in react without doing npm create react app at the begining
  *      -create normal HTML, CSS, JS files
- *      -install parcel - npm install -D parcel (-D means it's a devDependencies)
+ *      -install parcel - npm install -d parcel (-d means it's a devDependencies)
  *      -install react and reactDOM - npm install react, npm install react-dom
  *      -run parcel - npx parcel index.html
  *      -add a "start" scrip in package.json to do "parcel index.html"
@@ -87,9 +93,9 @@ root.render(parent);
 
 /**
  * JSX
- * JSX is HTML line syntax inside JavaScript
+ * JSX is HTML like syntax inside JavaScript, NOT HTML IN JAVASCRIPT!!!
  * We use className in JSx insatead of HTML class
- * We can camel casing in JSX instead of hyphen in HTML
+ * We can camel casing in JSX instead of hyphen in HTML(for class names)
  * wrap in () for multiple lines
  */
 
@@ -162,3 +168,32 @@ root.render(parent);
  *      normal old method
  * Use {} inside component to add JS code
  */
+
+//React Element
+const ReactElement = (
+  <h1 id="element" className="element">
+    React Element
+  </h1>
+);
+
+//React Functional Component
+const Para = () => {
+  return (
+    <div>
+      {/* use {} to write JS inside JSX */}
+      {ReactElement}
+      <p>This is 1st para</p>
+      <h6>h6</h6>
+    </div>
+  );
+};
+
+const Heading = () => {
+  return (
+    <div>
+      <Para />
+      {Para()}
+      <h1>heading</h1>
+    </div>
+  );
+};
